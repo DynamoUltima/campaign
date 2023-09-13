@@ -5,6 +5,8 @@ import { useForm, Controller } from "react-hook-form";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
 import { createCampaign, fetchAllCampaign } from "@/services/services";
 import { ICampaign } from "@/interface.ts/campaign.interface";
+import documentIcon from "@/public/svg/Document.svg"
+import Image from "next/image";
 
 interface Modal {
     isOpen: boolean,
@@ -75,7 +77,9 @@ const CreateCampaignModal = ({ isOpen, closeModal, }: Modal) => {
                                         as="h3"
                                         className="text-lg  leading-6  py-4 font-bold flex flex-row items-center space-x-2 justify-start"
                                     >
-                                        <DocumentTextIcon className="h-4 w-4 text-gray-900" />
+                                        {/* <DocumentTextIcon className="h-4 w-4 text-gray-900" /> */}
+
+                                        <Image alt="campaign" src={documentIcon}   objectFit="cover" layout="contain" className="bg-gray-900  " />
                                         <div className="text-gray-900"> Create a campaign</div>
 
                                     </Dialog.Title>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Logo from "@/public/uuk.png"
+import logo from "@/public/svg/logo.svg"
 import { BiCategory } from 'react-icons/bi'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BsCalendar4Week, BsPeople } from 'react-icons/bs'
@@ -9,7 +10,7 @@ const Nav = () => {
     return (
         <div className="flex  items-center justify-center bg-white">
             <div className="flex flex-row items-center justify-center space-x-4 p-4 max-w-screen-lg">
-                <Image alt="logo" width={100} src={Logo} objectFit="cover" layout="contain" />
+                <Image alt="logo" width={100} src={logo} objectFit="cover" layout="contain" />
 
                 <div className="flex flex-row items-center space-x-2 ">
 

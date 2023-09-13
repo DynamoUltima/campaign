@@ -1,5 +1,5 @@
 import { Tab } from "@headlessui/react";
-import { PencilIcon } from "@heroicons/react/24/solid";
+
 import {
     ArrowDownTrayIcon,
     MagnifyingGlassIcon,
@@ -26,7 +26,8 @@ import CreateCampaignModal from "./modals/createCampaignModal";
 import { useQuery } from "@tanstack/react-query";
 import { fetchAllCampaign, fetchPaginatedCampaign } from "@/services/services";
 import { ICampaign } from "@/interface.ts/campaign.interface";
-
+import documentIcon from "@/public/svg/Document.svg"
+import Image from "next/image";
 
 
 
@@ -149,7 +150,7 @@ const Campaign = () => {
                             onChange={handleInputChange}
                         />
 
-                        <Button type="submit" variant="outlined" className="capitalize !border border-cyan-900 bg-white  rounded-lg !flex !items-center justify-center text-cyan-900 !px-8">
+                        <Button type="submit" variant="outlined" className="capitalize !border border-[#004741] bg-white  rounded-lg !flex !items-center justify-center text-cyan-900 !px-8">
                             search
                         </Button>
                         {/* <button  onClick={()=>{}} className="border border-cyan-900  rounded-lg flex items-center text-cyan-900 p-2">
@@ -160,7 +161,9 @@ const Campaign = () => {
                 </form>
 
                 <Button onClick={openModal} className="flex items-center capitalize gap-3 bg-cyan-900" size="sm">
-                    <DocumentTextIcon strokeWidth={2} className="h-4 w-4" /> create campaingn
+                    {/* <DocumentTextIcon strokeWidth={2} className="h-4 w-4" /> */}
+                    <Image alt="document" src={documentIcon} objectFit="cover" layout="contain" />
+                     create campaingn
                 </Button>
             </div>
 
