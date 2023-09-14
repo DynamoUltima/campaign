@@ -18,12 +18,6 @@ export default async function handler(
 
     try {
 
-        // const { title, description, target } = req.body
-
-        console.log('search', req.body.data)
-
-
-
         const keyword = req.body.data??"";
         
         const query = {
@@ -36,7 +30,7 @@ export default async function handler(
 
         const { queryTerm } = req.query
 
-        console.log('called');
+        
         await connectMongo();
 
 
@@ -65,17 +59,13 @@ export default async function handler(
 
 
 
-
-
-
-
         if (campaign) {
             return res.status(200).json({ message: 'success', campaign, pagination: { count, pageCount } });
         }
 
     } catch (error: any) {
         console.log(error);
-        // return res.status(400).json({ error: error.message })
+      
         throw Error(error.message)
     }
 

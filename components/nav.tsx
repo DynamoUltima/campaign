@@ -9,7 +9,7 @@ import Dropdown from "./dropdown";
 const Nav = () => {
     return (
         <div className="flex  items-center justify-center bg-white">
-            <div className="flex flex-row items-center justify-center space-x-4 p-4 max-w-screen-lg">
+            <div className="flex flex-row items-center justify-center space-x-10 p-4 max-w-screen-lg">
                 <Image alt="logo" width={100} src={logo} objectFit="cover" layout="contain" />
 
                 <div className="flex flex-row items-center space-x-2 ">

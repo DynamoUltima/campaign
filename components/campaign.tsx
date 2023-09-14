@@ -21,7 +21,7 @@ import {
     Input,
 } from "@material-tailwind/react";
 import { ChangeEvent, useEffect, useState } from "react";
-import { TABLE_HEAD, TABLE_ROWS } from "@/data/data";
+import { TABLE_HEAD,  } from "@/data/data";
 import CreateCampaignModal from "./modals/createCampaignModal";
 import { useQuery } from "@tanstack/react-query";
 import { fetchAllCampaign, fetchPaginatedCampaign } from "@/services/services";
@@ -207,7 +207,7 @@ const Campaign = () => {
                                     },
                                     index,
                                 ) => {
-                                    const isLast = index === TABLE_ROWS.length - 1;
+                                    const isLast = index === campaignList.length - 1;
                                     const classes = isLast
                                         ? "p-4"
                                         : "p-4 border-b border-blue-gray-50";
@@ -220,7 +220,7 @@ const Campaign = () => {
                                                     <Typography
                                                         variant="small"
                                                         // color=""
-                                                        className="font-normal text-ellipsis overflow-hidden"
+                                                        className="font-normal text-ellipsis overflow-hidden text-gray-600"
                                                     >
                                                         {title}
                                                     </Typography>
@@ -230,7 +230,7 @@ const Campaign = () => {
                                                 <Typography
                                                     variant="small"
                                                     color="blue-gray"
-                                                    className="font-normal text-ellipsis overflow-hidden"
+                                                    className="font-normal text-ellipsis overflow-hidden text-gray-600"
                                                 >
                                                     {description}
                                                 </Typography>
@@ -239,7 +239,7 @@ const Campaign = () => {
                                                 <Typography
                                                     variant="small"
                                                     color="blue-gray"
-                                                    className="font-normal text-ellipsis overflow-hidden"
+                                                    className="font-normal text-ellipsis overflow-hidden text-gray-600"
                                                 >
                                                     {target}
                                                 </Typography>
@@ -249,7 +249,7 @@ const Campaign = () => {
                                                     <Typography
                                                         variant="small"
                                                         color="blue-gray"
-                                                        className="font-normal text-ellipsis overflow-hidden"
+                                                        className="font-normal text-ellipsis overflow-hidden text-gray-600"
                                                     >
                                                         {status}
 

@@ -85,7 +85,7 @@ const CreateCampaignModal = ({ isOpen, closeModal, }: Modal) => {
                                     </Dialog.Title>
                                     {/* Search */}
 
-                                    {/* <SearchBar /> */}
+                                   
 
                                     <div className=" overflow-auto space-y-4">
 
@@ -131,22 +131,17 @@ const CreateCampaignModal = ({ isOpen, closeModal, }: Modal) => {
 
                                                     name="target"
                                                     control={control}
-                                                    defaultValue="select you target group" // Set the initial value here
+                                                    defaultValue="select you target group" 
 
                                                     render={({ field }) => (
                                                         <select
                                                             {...field}
-                                                            // animate={undefined}
-                                                            // labelProps={undefined}
-                                                            // label="Select your target group"
+                                                
                                                             id="group"
                                                             defaultValue="Select your target group"
-                                                            // onChange={formik.handleChange}
-                                                            // value={formik.values.campus}
+                                                         
                                                             name="group"
-                                                            // required
-                                                            // placeholder="Select your target group"
-                                                            // {...register('target', { required: true })}
+                                                            
                                                             className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                                         >
                                                             <option disabled selected hidden>select you target group </option>
