@@ -26,7 +26,7 @@ import CreateCampaignModal from "./modals/createCampaignModal";
 import { useQuery } from "@tanstack/react-query";
 import { fetchAllCampaign, fetchPaginatedCampaign } from "@/services/services";
 import { ICampaign } from "@/interface.ts/campaign.interface";
-import documentIcon from "@/public/svg/Document.svg"
+import documentIcon from "@/public/svg/document.svg"
 import Image from "next/image";
 
 
